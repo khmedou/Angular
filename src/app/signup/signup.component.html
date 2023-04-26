@@ -1,0 +1,49 @@
+<body style="height: 1000px;">
+  <app-navbar></app-navbar>
+ <div class="card">
+                <div class="text-center">
+                    <h1>Inscrivez-vous</h1>
+                    <h6>Enregistrez-vous!!</h6>
+                </div>
+                <form [formGroup]="regForm" (ngSubmit)="register()" >
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Nom d'utilisateur</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="username">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"> Role</label>
+                        <select  class="form-control" id="exampleInputPassword1" formControlName="role">
+                          <option value="USER">utilisateur</option>
+                          <option value="ADMIN">admin</option>
+                          
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"> Nom</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="nom">
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"> Prénom</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="prenom">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"> Numéro</label>
+                        <input type="number" class="form-control" id="exampleInputPassword1" formControlName="tel">
+                      </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary" [disabled]="!regForm.valid">S'inscrire</button>
+                </form>
+               
+                <a style="color: #fff;margin-top:10px;"routerLink="/login">Déjà inscrit? Cliquer pour connecter.</a>
+ </div>
+
+          

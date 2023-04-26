@@ -1,0 +1,26 @@
+<body style="height: 800px;">
+<app-navbar></app-navbar>
+
+            <div class="card">
+                <div class="text-center">
+                    <h1>Connecter</h1>
+                    <h6>Entrer votre email et mot de passe. </h6>
+                </div>
+                <form [formGroup]="regForm" (ngSubmit)="login()">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Nom d'utilisateur</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" formControlName="username">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <a style="color: #fff;margin-top:10px;"routerLink="/signup">Nouveau utilisateur? Inscrivez-vous.</a>
+            </div>
+           
+       
+          </body>
+        
+          

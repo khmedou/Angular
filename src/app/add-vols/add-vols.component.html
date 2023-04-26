@@ -1,0 +1,39 @@
+<app-navbaruser></app-navbaruser>
+
+<form [formGroup]="myForm" (ngSubmit)="postvols()">
+  <div>
+    <label for="code_vol"> code_vol</label>
+    <input type="number" formControlName="code_vol" id="code_vol" required>
+  </div>  
+  <div>
+      <label for="dateDepart"> dateDepart</label>
+      <input type="date" formControlName="dateDepart" id="firstName" required>
+    </div>
+    <div>
+      <label for="ville_depat">ville_depart</label>
+      <input type="text" formControlName="ville_depat" id="ville_depat" required>
+    </div>
+    <div>
+      <label for="ville_dest">ville_dest</label>
+      <input type="text" formControlName="ville_dest" id="ville_dest" required>
+    </div>
+    <div>
+      <label for="nombreClassA">nombreClassA</label>
+      <input type="number" formControlName="nombreClassA" id="nombreClassA" required>
+    </div>
+    <div>
+      <label for="prixClassA">prixClassA</label>
+      <input type="number" formControlName="prixClassA" id="prixClassA" required>
+    </div>
+    <div>
+      <label for="nombreClassB">nombreClassB</label>
+      <input type="number" formControlName="nombreClassB" id="nombreClassB" required>
+    </div>
+    
+    <div>
+      <label for="prixClassB">prixClassB	</label>
+      <input type="number" formControlName="prixClassB" id="prixClassB" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  

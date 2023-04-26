@@ -1,0 +1,37 @@
+<app-navbaruser></app-navbaruser>
+<body style="height: 800px;">
+<table class="table">
+    <thead>
+        <tr>
+            <th>code_vole</th>
+            <th>dateDepart</th>
+            <th>ville_depart</th>
+            <th>ville_dest</th>
+            <th>nomberClassA</th>
+            <th>prixClassA</th>
+            <th>nomberClassB</th>
+            <th>prixClassB</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+          <tr *ngFor= " let vol of vols" >
+          <td>{{vol.code_vol}}</td>
+          <td>{{vol.dateDepart}}</td>
+          <td>{{vol.ville_depat}}</td>
+          <td>{{vol.ville_dest}}</td>
+          <td>{{vol.nombreClassA}}</td>
+          <td>{{vol.prixClassA}}</td>
+          <td>{{vol.nombreClassB}}</td>
+          <td>{{vol.prixClassB}}</td>
+          
+          <td><button class="button" (click)=" reserve(vol.code_vol,vol.prixClassA,vol.prixClassB)">Reserver</button></td>
+
+          
+        </tr>
+
+       
+    </tbody>
+   
+</table>
+<a></a>

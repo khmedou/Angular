@@ -1,0 +1,24 @@
+<app-navbaruser></app-navbaruser>
+<body style="height: 800px;">
+<form [formGroup]="myForm" (ngSubmit)="reserver()">
+    <div>
+      <label for="code_vol"> Code Vol</label>
+      <input type="text" formControlName="code_vol" id="code_vol" required readonly value={{code_vol}}>
+    </div>  
+    <div>
+        <label for="User "> Client</label>
+        <input type="text" formControlName="id" id="firstName" required readonly value={{user}}>
+      </div>
+      <label for="Class">Choisissez une classe:</label>
+      <select  class="form-control" id="exampleInputPassword1" formControlName="class">
+        <option value="A">Classe A</option>
+        <option value="B">Classe B</option>  
+      </select>
+      <div>
+        <label for="DATE"> Date</label>
+        <input  formControlName="date" id="firstName" required readonly value={{date}}>
+      </div>
+      
+      <button type="submit">Reserver</button>
+    </form>
+    
